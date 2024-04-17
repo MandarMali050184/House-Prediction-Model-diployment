@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>House Price Pridiction</title>
+    <link rel="stylesheet" type="text/css" href="./static/mycss.css", media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="./static/mycss2.css", media="screen,projection"/>
+</head>
+<body>
+<div id="body">
+            <div class='background'>
+                <div class="text1">
+                    <h1>WELCOME TO ML HOUSE PRICE PRIDICTION</h1>
+                    <p id=header>made with ❤️ by Mandar R Mali</p>
+                    <img src="static/1.png" alt="House Price Prediction" width="600" hight="333">
+                </div>
+            </div>
+    <div class=paragraph1>
+        <p>
+             I created a machine learning model using the linear regression equation. I tries to pridict the price of the house(in USD) based on the certain pretrained data .
+        </p>
+        
+    </div>
+
+                <div id=result>
+
+                 <p> {{pred}}</p>
+                </div>
+
+    <div class=paragraph2>
+        <p>
+        Its a unmessenger project, I just want to make the end product using the machine learning model,which I created in python.
+        </p>
+    </div>
+      <div class=form>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>House Price Prediction</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="register_page">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST">
+                Bedrooms: <input type="number" name='bedrooms' placeholder="Enter the no of Bedrooms"><br>
+                Bathrooms: <input type="number" name='bathrooms' placeholder="Enter the no of Bathrooms"><br>
+                Floors: <input type="number" name='floors' placeholder="Enter the no of Floors"><br>
+                Year of Build: <input type="number" name='yr_built' placeholder="Enter year of Build"><br>
+                <input type="submit" value="predict" class="submit">
+            </form>
+            <p> House Price is in US $: {{data}}</p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
